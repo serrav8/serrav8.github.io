@@ -2219,6 +2219,11 @@ textarea.w-input, textarea.w-select {
   line-height: 26px;
 }
 
+.page-nav-link.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .page-nav-link.work {
   font-size: 14px;
   font-weight: 400;
@@ -2478,7 +2483,7 @@ textarea.w-input, textarea.w-select {
   width: 75%;
   font-family: Tiktoksans, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 28px;
   text-decoration: none;
 }
