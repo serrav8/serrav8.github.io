@@ -8,6 +8,26 @@ body {
   margin: 0;
 }
 
+.loading_div {
+
+position: absolute; 
+height: 100vh; 
+width: 100vw;
+background-color: #141414;
+animation-name: fade-out;
+animation-duration: 1s;
+animation-iteration-count: 1;
+animation-timing-function: ease-in;
+animation-fill-mode: forwards;
+z-index: 20;
+pointer-events:none;
+}
+
+@keyframes fade-out {
+  from {opacity: 100%;}
+  to {opacity: 0%; display: none;}
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -2199,11 +2219,6 @@ textarea.w-input, textarea.w-select {
   line-height: 26px;
 }
 
-.page-nav-link.name {
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .page-nav-link.work {
   font-size: 14px;
   font-weight: 400;
@@ -2223,6 +2238,10 @@ textarea.w-input, textarea.w-select {
 
 .page-nav-link.cv:hover {
   font-weight: 600;
+}
+
+.page-nav-link.cv.w--current {
+  font-weight: 400;
 }
 
 .year {
@@ -2246,6 +2265,7 @@ textarea.w-input, textarea.w-select {
 
 .project-name {
   letter-spacing: -.04em;
+  cursor: pointer;
   font-family: Tiktoksans, Arial, sans-serif;
   font-size: 28px;
   font-weight: 600;
@@ -2274,6 +2294,10 @@ textarea.w-input, textarea.w-select {
   font-family: Tiktoksans, Arial, sans-serif;
   font-size: 12px;
   line-height: 16px;
+}
+
+.project-description-text.highlighted-text {
+  font-weight: 600;
 }
 
 .project-description {
@@ -2454,7 +2478,7 @@ textarea.w-input, textarea.w-select {
   width: 75%;
   font-family: Tiktoksans, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 28px;
   text-decoration: none;
 }
@@ -2765,6 +2789,14 @@ textarea.w-input, textarea.w-select {
     width: 100%;
   }
 
+  .project-description, ._3-column-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ._2-column-row-left {
+    grid-template-columns: .5fr .5fr;
+  }
+
   .menu-backup {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2823,11 +2855,14 @@ textarea.w-input, textarea.w-select {
   }
 
   .project-name {
+    cursor: pointer;
+    width: 75%;
     font-size: 18px;
     line-height: 18px;
   }
 
   .project-date {
+    margin-top: 0;
     padding-left: 0;
     font-size: 10px;
     line-height: 12px;
@@ -2844,6 +2879,7 @@ textarea.w-input, textarea.w-select {
     grid-row-gap: 11px;
     grid-template-columns: 1fr;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   ._3-column-row {
@@ -2920,12 +2956,8 @@ textarea.w-input, textarea.w-select {
     position: absolute;
   }
 
-  .name-mobile.about {
+  .name-mobile.about, .project-details {
     display: none;
-  }
-
-  .project-details {
-    display: block;
   }
 
   .cv-mobile {
@@ -2940,7 +2972,7 @@ textarea.w-input, textarea.w-select {
   .cv-mobile.w--current {
     padding-right: 20px;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 400;
     display: block;
     position: absolute;
     right: 0%;
@@ -3029,10 +3061,11 @@ textarea.w-input, textarea.w-select {
   .footer-quip {
     font-size: 18px;
     line-height: 18px;
+    display: none;
   }
 }
 
-#w-node-_7c2ac1de-08a9-39b1-e63e-bfd6766429ae-75c056ee, #w-node-_02aebfb0-b958-abbb-1598-f91d4fd12213-75c056ee, #w-node-_341da4e2-1f25-f6a1-8ef1-e93be1a3d226-75c056ee, #w-node-_19e7cff1-5b89-99c2-3f01-b57fd2cac2db-75c056ee, #w-node-_2676d01e-1b94-64ff-94fb-9ccce6bce37a-4b91fbb4, #w-node-de9ef8a9-1c8d-116a-9599-a4e343f6251e-4b91fbb4, #w-node-_6506f28a-1c98-d784-08df-6bf340e19f07-4b91fbb4, #w-node-_52dd1ad1-cfc4-95a5-d8a1-5c5ff18b1d8b-4b91fbb4, #w-node-_3bdcad03-04a5-ee4a-9ab9-992cc0c1c0a3-4b91fbb4, #w-node-_3bdcad03-04a5-ee4a-9ab9-992cc0c1c0b2-4b91fbb4, #w-node-_2e1646ed-3814-2708-87b1-bed90f4d60ff-4b91fbb4, #w-node-_2e1646ed-3814-2708-87b1-bed90f4d610c-4b91fbb4, #w-node-_2b3f5b28-85ec-76ae-6657-13360d7f1f74-4b91fbb4, #w-node-_2b3f5b28-85ec-76ae-6657-13360d7f1f7f-4b91fbb4, #w-node-_63c2a778-3f54-0301-be39-5f1ed7afda10-4b91fbb4, #w-node-_63c2a778-3f54-0301-be39-5f1ed7afda24-4b91fbb4 {
+#w-node-_7c2ac1de-08a9-39b1-e63e-bfd6766429ae-75c056ee, #w-node-_01e525e7-2ddf-2bc6-42ec-5640b7cde111-75c056ee, #w-node-_1473f52f-ea4f-0462-7835-49678efa3d6d-75c056ee, #w-node-_02aebfb0-b958-abbb-1598-f91d4fd12213-75c056ee, #w-node-_341da4e2-1f25-f6a1-8ef1-e93be1a3d226-75c056ee, #w-node-_19e7cff1-5b89-99c2-3f01-b57fd2cac2db-75c056ee, #w-node-_2676d01e-1b94-64ff-94fb-9ccce6bce37a-4b91fbb4, #w-node-de9ef8a9-1c8d-116a-9599-a4e343f6251e-4b91fbb4, #w-node-_6506f28a-1c98-d784-08df-6bf340e19f07-4b91fbb4, #w-node-_52dd1ad1-cfc4-95a5-d8a1-5c5ff18b1d8b-4b91fbb4, #w-node-_3bdcad03-04a5-ee4a-9ab9-992cc0c1c0a3-4b91fbb4, #w-node-_3bdcad03-04a5-ee4a-9ab9-992cc0c1c0b2-4b91fbb4, #w-node-_2e1646ed-3814-2708-87b1-bed90f4d60ff-4b91fbb4, #w-node-_2e1646ed-3814-2708-87b1-bed90f4d610c-4b91fbb4, #w-node-_2b3f5b28-85ec-76ae-6657-13360d7f1f74-4b91fbb4, #w-node-_2b3f5b28-85ec-76ae-6657-13360d7f1f7f-4b91fbb4, #w-node-_63c2a778-3f54-0301-be39-5f1ed7afda10-4b91fbb4, #w-node-_63c2a778-3f54-0301-be39-5f1ed7afda24-4b91fbb4 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
