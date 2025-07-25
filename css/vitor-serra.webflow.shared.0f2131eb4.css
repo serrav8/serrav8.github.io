@@ -9,7 +9,6 @@ body {
 }
 
 .loading_div {
-
 position: absolute; 
 height: 100vh; 
 width: 120vw;
@@ -23,9 +22,19 @@ z-index: 20;
 pointer-events:none;
 }
 
+
 @keyframes fade-out {
   from {opacity: 100%;}
   to {opacity: 0%; display: none;}
+}
+
+.website-link {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+.website-link:visited {
+  color: #f0f0f0;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
