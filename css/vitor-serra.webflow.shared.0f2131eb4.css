@@ -2152,6 +2152,7 @@ textarea.w-input, textarea.w-select {
   margin-right: 30px;
   padding-top: 30px;
   padding-left: 30px;
+  padding-bottom: 40px;
   display: flex;
 }
 
@@ -2664,7 +2665,7 @@ textarea.w-input, textarea.w-select {
   letter-spacing: -.04em;
   column-count: 0;
   margin-top: 10px;
-  padding-left: 3px;
+  padding-left: 0px;
   padding-right: 20%;
   font-family: Tiktoksans, Arial, sans-serif;
   font-size: 13px;
@@ -2826,7 +2827,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .description {
-    padding-left: 3px;
+    padding-left: 0px;
   }
 }
 
