@@ -59,12 +59,84 @@
                     <div class="project-description-text"></div> -->
                 </div>
                 <div class="_2-column-row-equal">
-
-                    <img
+                    <!-- <img
                         src="media/mindful.png"
-                        loading="lazy" alt="" />
+                        loading="lazy" alt="" href="https://www.figma.com/proto/MIGjY2T0KlLeg5Qgp9QK8A/portfolio?node-id=131-1322&viewport=-631%2C329%2C0.13&t=wj4uX1JNLTGB55S5-8&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&hotspot-hints=0&disable-default-keyboard-nav=1&hide-ui=1" /> -->
+                       
+                        <div class="video-container">
+                                    <video muted loop autoplay>
+                                        <source src="media/thumbnail.mp4" type="video/mp4">
+                                    </video>
+
+                                    <a class="case-button" href="https://www.figma.com/proto/MIGjY2T0KlLeg5Qgp9QK8A/portfolio?node-id=131-1322">
+                                        See case study
+                                    </a>
+                        </div>
+                        <style>
+                            .video-container {
+                                position: relative;
+                                display: inline-block;
+                                overflow: hidden;
+                            }
+
+                            /* Overlay */
+                            .video-container::after {
+                                content: "";
+                                position: absolute;
+                                inset: 0;
+                                background: rgba(0, 0, 0, 0);
+                                transition: background 0.2s ease;
+                                z-index: 1; /* below button */
+                            }
+
+                            /* Video */
+                            .video-container video {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                            }
+
+                            /* Button */
+                            .case-button {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                
+                                opacity: 0;
+                                transition: opacity 0.2s ease;
+
+                                background: transparent;
+                                color: white;
+                                padding: 10px 16px;
+                                text-decoration: none;
+                                border-radius: 20px;
+                                letter-spacing: -.04em;
+                                font-size: 28px;
+                                padding: 16px;
+                                
+
+                                z-index: 2; /* above overlay */
                     
-                    <video width="100%" height="auto" muted loop autoplay>
+                            }
+
+                            .case-button:hover {
+                                text-decoration: underline;
+                            }
+
+                            /* Hover effects */
+                            .video-container:hover::after {
+                                background: rgba(0, 0, 0, 0.4);
+                            }
+
+                            .video-container:hover .case-button {
+                                opacity: 1;
+                            }
+
+                        </style>
+
+
+                        <video width="100%" height="auto"  muted loop autoplay>
                         <source src="media/smash.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                         </video>
@@ -79,7 +151,7 @@
             <div class="project-date">2022, 2025</div>
             <div class="project-details">
                 <div class="project-description">
-                    <div class="project-description-text">A few websites I've designed and implementated over the years.<br><br>Click to see live version!<a class="website-link" href="https://www.fernaocruz.com/"></div>
+                    <div class="project-description-text">A few websites I've designed and implemented over the years.<br><br>Click to see live version!<a class="website-link" href="https://www.fernaocruz.com/"></div>
                     <div class="project-description-text"></div>
                     <div class="project-description-text"></div>
                 </div>

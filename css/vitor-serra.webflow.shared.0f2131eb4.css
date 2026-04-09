@@ -8,6 +8,7 @@ body {
   margin: 0;
 }
 
+
 .loading_div {
 position: absolute; 
 height: 100vh; 
@@ -21,7 +22,6 @@ animation-fill-mode: forwards;
 z-index: 20;
 pointer-events:none;
 }
-
 
 @keyframes fade-out {
   from {opacity: 100%;}
