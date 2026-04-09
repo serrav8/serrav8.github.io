@@ -72,6 +72,16 @@
                                         See case study
                                     </a>
                         </div>
+
+                         <div class="video-container">
+                                    <video muted loop autoplay>
+                                        <source src="media/smash.mp4" type="video/mp4">
+                                    </video>
+
+                                    <a class="case-button-no" href="#">
+                                        Coming soon
+                                    </a>
+                        </div>
                         <style>
                             .video-container {
                                 position: relative;
@@ -97,7 +107,7 @@
                             }
 
                             /* Button */
-                            .case-button {
+                            .case-button, .case-button-no {
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
@@ -124,6 +134,10 @@
                                 text-decoration: underline;
                             }
 
+                            .case-button-no:hover {
+                                text-decoration: none;
+                            }
+
                             /* Hover effects */
                             .video-container:hover::after {
                                 background: rgba(0, 0, 0, 0.4);
@@ -133,13 +147,14 @@
                                 opacity: 1;
                             }
 
+                            .video-container:hover .case-button-no {
+                                opacity: 1;
+                            }
+
                         </style>
 
 
-                        <video width="100%" height="auto"  muted loop autoplay>
-                        <source src="media/smash.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>
+                
                 </div>
             
             </div>
